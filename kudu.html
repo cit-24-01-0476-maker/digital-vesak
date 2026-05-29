@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>වෙසක් කූඩු</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="video-page">
+
+    <a href="index.html" id="back-btn">⬅ ආපසු</a>
+
+    <div id="welcome-screen">
+        <h1>වෙසක් කූඩු</h1>
+        <p>ලස්සන වෙසක් කූඩු නරඹන්න පිවිසෙන්න</p>
+        <button id="enter-btn">නරඹන්න</button>
+    </div>
+
+    <audio id="kudu-audio" loop>
+        <source src="kudu_song.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="normal-video-container" style="display: none;">
+        <video id="normal-kudu-video" loop playsinline>
+            <source src="kudu360.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* Reset & Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { width: 100%; font-family: 'Abhaya Libre', serif; background-color: #050510; color: white; scroll-behavior: smooth; }
+
+/* Navbar */
+.navbar { position: absolute; top: 0; left: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 10; }
+.navbar .logo { font-size: 2rem; font-weight: 800; color: #FFD700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); display: flex; align-items: center; gap: 12px; }
+.dharmachakra { color: #000; font-size: 2.8rem; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5); display: inline-block; animation: spin 8s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.design-by-box { border: 2px solid #FFD700; padding: 10px 25px; border-radius: 8px; color: #FFD700; font-size: 1.1rem; font-family: sans-serif; font-weight: bold; letter-spacing: 2px; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px); box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); transition: 0.4s ease; cursor: default; }
+.design-by-box:hover { background: #FFD700; color: #000; box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); transform: scale(1.05); }
+
+/* Hero Section */
+.hero-section { position: relative; width: 100%; height: 100vh; background: url('bg.jpg') no-repeat center center/cover; display: flex; justify-content: center; align-items: center; text-align: center; overflow: hidden; }
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.65); z-index: 1; }
+
+/* Fireflies */
+.fireflies { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+.firefly { position: absolute; width: 6px; height: 6px; background: #FFD700; border-radius: 50%; box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700; animation: floatUp 15s infinite linear; opacity: 0; }
+.firefly:nth-child(1) { left: 10%; animation-duration: 12s; } .firefly:nth-child(2) { left: 25%; animation-duration: 18s; animation-delay: 2s; } .firefly:nth-child(3) { left: 40%; animation-duration: 10s; animation-delay: 4s; } .firefly:nth-child(4) { left: 60%; animation-duration: 14s; animation-delay: 1s; } .firefly:nth-child(5) { left: 75%; animation-duration: 20s; animation-delay: 5s; } .firefly:nth-child(6) { left: 90%; animation-duration: 11s; animation-delay: 3s; }
+@keyframes floatUp { 0% { bottom: -10%; opacity: 0; transform: translateX(0); } 20% { opacity: 1; transform: translateX(20px); } 50% { transform: translateX(-20px); } 80% { opacity: 1; transform: translateX(20px); } 100% { bottom: 110%; opacity: 0; transform: translateX(-20px); } }
+
+/* Home Screen Mini Pahan Row */
+.pahan-row { position: absolute; bottom: 0; left: 0; width: 100%; display: flex; justify-content: space-around; padding: 0 2%; z-index: 2; }
+.mini-pahana { position: relative; width: 25px; height: 12px; background: #5c2e0b; border-radius: 2px 2px 12px 12px; box-shadow: 0 5px 8px rgba(0,0,0,0.9); }
+.mini-flame { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); width: 10px; height: 18px; background: radial-gradient(ellipse at bottom, #fffff0 0%, #ffcf00 40%, #ff8c00 80%, transparent 100%); border-radius: 50% 50% 20% 20% / 60% 60% 40% 40%; box-shadow: 0 0 10px #ff8c00, 0 0 20px #ffcf00; animation: flicker 0.15s infinite alternate; }
+.mini-pahana:nth-child(odd) .mini-flame { animation-delay: 0.05s; }
+.mini-pahana:nth-child(3n) .mini-flame { animation-delay: 0.1s; }
+
+.hero-content { position: relative; z-index: 3; max-width: 900px; padding: 20px; }
+.hero-content h1 { font-size: 5rem; color: #FFD700; text-shadow: 0 0 30px #FFD700; margin-bottom: 20px; font-weight: 800; }
+.hero-content p { font-size: 1.8rem; color: #e0e0e0; margin-bottom: 40px; line-height: 1.5; }
+.scroll-btn { display: inline-block; padding: 15px 40px; font-size: 1.5rem; background: #FFD700; color: #000; border: none; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
+.scroll-btn:hover { background: #fff; box-shadow: 0 0 30px #fff; transform: scale(1.05); }
+
+/* Explore Cards */
+.explore-section { padding: 80px 20px; background: #050510; text-align: center; }
+.section-title { font-size: 3.5rem; color: #FFD700; margin-bottom: 50px; }
+.card-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto; }
+.card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 15px; width: 350px; overflow: hidden; transition: 0.4s; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.card:hover { transform: translateY(-10px); border-color: #FFD700; box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3); }
+.card-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid #FFD700; }
+.card-info { padding: 25px; text-align: left; }
+.card-info h3 { font-size: 2rem; color: #FFD700; margin-bottom: 15px; }
+.card-info p { font-size: 1.3rem; color: #ccc; margin-bottom: 25px; line-height: 1.4; }
+.enter-btn { display: inline-block; padding: 10px 25px; background: transparent; color: #FFD700; border: 2px solid #FFD700; border-radius: 5px; text-decoration: none; font-size: 1.3rem; font-weight: bold; transition: 0.3s; }
+.enter-btn:hover { background: #FFD700; color: #000; }
+
+/* Subpages UI */
+#welcome-screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, #1a1a2e, #000); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10; color: white; text-align: center; }
+#welcome-screen h1 { font-size: 4rem; color: #FFD700; margin-bottom: 15px; }
+#enter-btn { padding: 15px 40px; font-size: 1.5rem; cursor: pointer; background: #FFD700; border: none; border-radius: 8px; font-weight: bold; margin-top: 20px; }
+#back-btn { position: absolute; top: 20px; left: 20px; z-index: 20; color: white; background: rgba(0,0,0,0.5); padding: 10px 20px; text-decoration: none; border-radius: 5px; border: 1px solid white; font-size: 1.2rem; }
+
+/* Videos */
+.video-page { background-color: #000; }
+#normal-video-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; }
+#normal-kudu-video { width: 100%; height: 100%; object-fit: cover; }
+a-scene { width: 100vw; height: 100vh; }
+
+/* ==============================================================
+   🪔 DIGITAL PAHANA (Pure CSS)
+   ============================================================== */
+.pahana-page { background: radial-gradient(circle, #1a0b00, #000); display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; transition: background 1.5s ease-in-out; }
+.lamp-container { display: flex; flex-direction: column; align-items: center; z-index: 5; }
+.pahana-title { font-size: 3.5rem; color: #FFD700; margin-bottom: 50px; text-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+.pahana-wrapper { margin-bottom: 50px; display: inline-block; margin-top: 30px; }
+.css-pahana { position: relative; display: flex; flex-direction: column; align-items: center; }
+.pahana-bowl { width: 200px; height: 80px; background: linear-gradient(135deg, #a0522d, #5c2e0b); border-radius: 10px 10px 100px 100px; position: relative; box-shadow: 0 15px 25px rgba(0,0,0,0.8), inset 0 -10px 20px rgba(0,0,0,0.6); z-index: 2; }
+.pahana-rim { width: 200px; height: 45px; background: radial-gradient(ellipse, #1a0b00 30%, #5c2e0b 90%); border-radius: 50%; position: absolute; top: -22px; z-index: 3; border: 4px solid #b8623b; box-shadow: inset 0 5px 10px rgba(0,0,0,0.8); transition: box-shadow 1.5s ease; }
+.pahana-base { width: 110px; height: 40px; background: linear-gradient(to right, #8b4513, #3e1f06); border-radius: 5px 5px 45px 45px; margin-top: -5px; z-index: 1; box-shadow: 0 20px 25px rgba(0,0,0,0.9); }
+.pahana-wick { width: 8px; height: 35px; background: #e0c090; position: absolute; top: -45px; left: 50%; transform: translateX(-50%); border-radius: 4px 4px 0 0; z-index: 4; box-shadow: inset -2px 0 5px rgba(0,0,0,0.4); }
+.flame { position: absolute; top: -105px; left: 50%; transform: translateX(-50%); width: 40px; height: 75px; background: radial-gradient(ellipse at bottom, #fffff0 0%, #ffcf00 30%, #ff8c00 60%, transparent 100%); border-radius: 50% 50% 20% 20% / 60% 60% 40% 40%; box-shadow: 0 0 25px #ff8c00, 0 0 50px #ffcf00, 0 0 100px #ff8c00; opacity: 0; transition: opacity 1.5s ease-in-out; animation: flicker 0.12s infinite alternate; z-index: 5; }
+.flame.lit { opacity: 1; }
+.flame.lit ~ .pahana-rim { box-shadow: inset 0 0 30px #ff8c00, inset 0 5px 10px rgba(0,0,0,0.8); background: radial-gradient(ellipse, #4a2500 30%, #b8623b 90%); }
+@keyframes flicker { 0% { transform: translateX(-50%) scale(1) rotate(-2deg); opacity: 0.9; } 100% { transform: translateX(-50%) scale(1.02) rotate(2deg); opacity: 1; } }
+.light-btn { padding: 15px 40px; font-size: 1.5rem; background: #d35400; color: white; border: none; border-radius: 30px; cursor: pointer; font-weight: bold; box-shadow: 0 0 15px rgba(211, 84, 0, 0.6); transition: 0.3s; font-family: 'Abhaya Libre', serif; }
+.light-btn:hover { background: #FFD700; color: #000; box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); transform: scale(1.05); }
+.blessing-text { margin-top: 30px; font-size: 2rem; color: #FFD700; opacity: 0; transition: opacity 1.5s ease-in; text-shadow: 0 0 15px rgba(255, 215, 0, 0.8); }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; padding: 15px; gap: 15px; background: rgba(0, 0, 0, 0.5); }
+    .navbar .logo { font-size: 1.5rem; } .dharmachakra { font-size: 2.2rem; }
+    .design-by-box { font-size: 0.8rem; padding: 6px 15px; }
+    .hero-content h1 { font-size: 3rem; } .hero-content p { font-size: 1.2rem; }
+    .section-title { font-size: 2.5rem; }
+    .pahan-row { bottom: 0; padding: 0 5%; }
+    .mini-pahana { width: 18px; height: 8px; }
+    .mini-flame { width: 8px; height: 14px; top: -14px; }
+    .pahana-title { font-size: 2.5rem; margin-bottom: 30px; }
+    .pahana-bowl { width: 150px; height: 60px; }
+    .pahana-rim { width: 150px; height: 35px; top: -17px; }
+    .pahana-base { width: 80px; height: 30px; }
+    .flame { top: -85px; width: 30px; height: 60px; }
+    .pahana-wick { height: 25px; top: -35px; }
+    .blessing-text { font-size: 1.5rem; padding: 0 20px; }
+}

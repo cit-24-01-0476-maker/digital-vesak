@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <title>360 තොරණ</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="index.html" id="back-btn">⬅ ආපසු</a>
+
+    <div id="welcome-screen">
+        <h1>360 තොරණ</h1>
+        <p>දුරකථනය හරස් අතට තබා නරඹන්න</p>
+        <button id="enter-btn">නරඹන්න</button>
+    </div>
+
+    <audio id="thorana-audio" loop>
+        <source src="thorana_song.mp3" type="audio/mpeg">
+    </audio>
+
+    <a-scene id="vesak-scene" visible="false" vr-mode-ui="enabled: false">
+        <a-assets>
+            <video id="vesak-video" loop="true" src="vesak360.mp4" crossorigin="anonymous" playsinline muted="true"></video>
+        </a-assets>
+        <a-videosphere src="#vesak-video" radius="500"></a-videosphere>
+        <a-camera></a-camera>
+    </a-scene>
+
+    <script src="script.js"></script>
+</body>
+</html>

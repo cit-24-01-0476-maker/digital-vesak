@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ඩිජිටල් පහන් පූජාව</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pahana-page" id="pahana-bg">
+
+    <a href="index.html" id="back-btn">⬅ ආපසු</a>
+
+    <div id="welcome-screen">
+        <h1>ඩිජිටල් පහන් පූජාව</h1>
+        <p>පහන් සිතින් යුතුව පිවිසෙන්න...</p>
+        <button id="enter-btn">පිවිසෙන්න</button>
+    </div>
+
+    <audio id="pahana-audio" loop>
+        <source src="pahana_song.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="lamp-container" id="lamp-section" style="display: none;">
+        <h2 class="pahana-title">ඔබේ පහන දල්වන්න</h2>
+        
+        <div class="pahana-wrapper">
+            <div class="css-pahana">
+                <div class="flame" id="flame"></div>
+                <div class="pahana-wick"></div>
+                <div class="pahana-rim" id="pahana-rim"></div>
+                <div class="pahana-bowl"></div>
+                <div class="pahana-base"></div>
+            </div>
+        </div>
+
+        <button id="light-btn" class="light-btn">පහන දල්වන්න 🪔</button>
+        <p id="blessing-text" class="blessing-text"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
